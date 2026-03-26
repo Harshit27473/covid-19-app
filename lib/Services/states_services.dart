@@ -1,0 +1,21 @@
+import 'dart:convert';
+
+import 'package:http/http.dart' as http;
+
+import '../Model/WorldStatesModel.dart';
+import 'Utilities/app_urls.dart';
+
+class StatesServices {
+
+  Future<WorldStatesModel> fetchWorldStatesRecords() async {
+    final response = await http.get(Uri.parse(AppUrls.worldStatesApi));
+
+    if (response.statusCode == 200) {
+      var data = jsonDecode(response.body);
+
+      return WorldStatesModel.fromJson(data);
+    } else{
+      throw Exception('error');
+    }
+  }
+}
