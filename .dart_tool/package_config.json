@@ -215,7 +215,7 @@
       "name": "covid_tracker",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
     }
   ],
   "generator": "pub",
