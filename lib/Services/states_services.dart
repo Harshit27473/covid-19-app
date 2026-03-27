@@ -18,4 +18,18 @@ class StatesServices {
       throw Exception('error');
     }
   }
+
+  Future<List<dynamic>> countriesListApi() async {
+    var data ;
+    final response = await http.get(Uri.parse(AppUrls.countriesList));
+
+    if (response.statusCode == 200) {
+      data = jsonDecode(response.body);
+
+      return data;
+    } else{
+      throw Exception('error');
+    }
+  }
+
 }

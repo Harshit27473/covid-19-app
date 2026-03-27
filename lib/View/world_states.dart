@@ -2,7 +2,6 @@ import 'package:covid_tracker/Services/states_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:pie_chart/pie_chart.dart';
-
 import '../Model/WorldStatesModel.dart';
 import 'countries_list.dart';
 
@@ -69,7 +68,7 @@ class _WorldStatesScreenState extends State<WorldStatesScreen> with TickerProvid
                               "Deaths": double.parse(snapshot.data!.deaths!.toString()),
                             },
                             chartValuesOptions: const ChartValuesOptions(
-                              showChartValuesInPercentage: true,
+                                showChartValuesInPercentage: true
                             ),
                             chartRadius: MediaQuery
                                 .of(context)
@@ -123,8 +122,7 @@ class _WorldStatesScreenState extends State<WorldStatesScreen> with TickerProvid
                       );
                     }
                   }
-              ),
-
+               ),
             ],
           ),
         ),
